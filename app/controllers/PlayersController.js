@@ -6,6 +6,10 @@ export class playersController {
         console.log('player controller loaded', AppState.players)
         this.drawPlayers()
     }
+    scorePoint() {
+        console.log("clicked", Player.name)
+
+    }
 
 
     drawPlayers() {
@@ -16,9 +20,8 @@ export class playersController {
         document.getElementById('players').innerHTML = content
         console.log('draw success')
     }
-}
-export class scorePoint {
-    constructor() {
-        console.log("clicked", Player.name)
+
+    selectPlayers() {
+        PlayersService
     }
 }

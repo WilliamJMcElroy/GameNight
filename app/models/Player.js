@@ -1,4 +1,3 @@
-import { scorePoint } from "../controllers/PlayersController.js";
 
 export class Player {
     constructor(name) {
@@ -9,13 +8,14 @@ export class Player {
     }
 
 
+
     get cardTemplate() {
         return `
     <div class="card">
         <div class="card-body">
             ${this.name} - ${this.score}
         </div>
-        <button class="btn" onclick="${scorePoint}" >Score Point</button>
+        <button class="btn" onclick="app.playersController.scorePoint('${this.name}')" >Score Point</button>
     </div>`
     }
 }
